@@ -3,18 +3,15 @@ import changeVideoList from './videoList.js';
 import changeVideo from './currentVideo.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
 
-
 var handleVideoSearch = (q) => {
 
-  return (dispatch) => {
+  return dispatch => {
     searchYouTube({ key: YOUTUBE_API_KEY, query: q }, (videos) => {
       dispatch(changeVideo(videos[0]));
       dispatch(changeVideoList(videos));
     })
   };
 };
-
-
 // this.setState({
 //   videos: videos,
 //   currentVideo: videos[0]

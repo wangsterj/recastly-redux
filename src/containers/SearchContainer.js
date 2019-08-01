@@ -4,9 +4,11 @@ import handleSearchChange from '../actions/search.js';
 
 
 
-function mapDispatchToProps(q) {
-  return { handleSearchInputChange: handleSearchChange(q) };
-}
+var mapDispatchToProps = (dispatch) => ({
+  handleSearchInputChange: (q) => {
+    dispatch(handleSearchChange(q));
+  }
+})
 
 //TODO: define a SearchContainer component which will hook up your action
 // dispatchers with your search component props.

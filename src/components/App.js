@@ -52,18 +52,18 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={this.state.currentVideo} />
+            <VideoPlayerContainer />
           </div>
           <div className="col-md-5">
-            <VideoList
-              handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
-              videos={this.state.videos}
-            />
+            <VideoListContainer />
           </div>
         </div>
       </div>
     );
   }
 }
+
+// handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
+// videos={this.state.videos}
 
 export default App;
